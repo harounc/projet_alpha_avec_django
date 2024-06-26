@@ -25,8 +25,8 @@ from .views import index, users, users_details, users_devices
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('<str:route>/', index),
     path('users/', users),
     path('users/<int:id_user>', users_details),
     path('users/<int:id_user>/devices/<int:id_device>', users_devices),
+    path('<str:route>/', index),
 ]
